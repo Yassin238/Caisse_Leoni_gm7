@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1FF49EFF-550C-4587-A579-41836F9F4631}|Caisse_Leoni_gm7.csproj|c:\\users\\medya\\source\\repos\\caisse_leoni_gm7\\services\\smsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FF49EFF-550C-4587-A579-41836F9F4631}|Caisse_Leoni_gm7.csproj|solutionrelative:services\\smsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1FF49EFF-550C-4587-A579-41836F9F4631}|Caisse_Leoni_gm7.csproj|c:\\users\\medya\\source\\repos\\caisse_leoni_gm7\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
       "RelativeMoniker": "D:0:0:{1FF49EFF-550C-4587-A579-41836F9F4631}|Caisse_Leoni_gm7.csproj|solutionrelative:.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1FF49EFF-550C-4587-A579-41836F9F4631}|Caisse_Leoni_gm7.csproj|c:\\users\\medya\\source\\repos\\caisse_leoni_gm7\\views\\firstlogin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1FF49EFF-550C-4587-A579-41836F9F4631}|Caisse_Leoni_gm7.csproj|solutionrelative:views\\firstlogin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FF49EFF-550C-4587-A579-41836F9F4631}|Caisse_Leoni_gm7.csproj|c:\\users\\medya\\source\\repos\\caisse_leoni_gm7\\services\\smsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1FF49EFF-550C-4587-A579-41836F9F4631}|Caisse_Leoni_gm7.csproj|solutionrelative:services\\smsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1FF49EFF-550C-4587-A579-41836F9F4631}|Caisse_Leoni_gm7.csproj|c:\\users\\medya\\source\\repos\\caisse_leoni_gm7\\views\\adminview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -114,7 +114,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -122,7 +122,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": ".gitignore",
               "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\.gitignore",
               "RelativeDocumentMoniker": ".gitignore",
@@ -135,31 +135,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditProfile.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\EditProfile.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\EditProfile.xaml.cs",
-              "ToolTip": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\EditProfile.xaml.cs",
-              "RelativeToolTip": "Views\\EditProfile.xaml.cs",
-              "ViewState": "AQIAAEcAAAAAAAAAAAAewFoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T18:48:56.182Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EditProfile.xaml",
-              "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\EditProfile.xaml",
-              "RelativeDocumentMoniker": "Views\\EditProfile.xaml",
-              "ToolTip": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\EditProfile.xaml",
-              "RelativeToolTip": "Views\\EditProfile.xaml",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAYwCQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-08-01T18:46:45.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "ManageUsersPage.xaml",
               "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\ManageUsersPage.xaml",
               "RelativeDocumentMoniker": "Views\\ManageUsersPage.xaml",
@@ -171,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "AddUserPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\AddUserPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\AddUserPage.xaml.cs",
@@ -183,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ManageUsersPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\ManageUsersPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\ManageUsersPage.xaml.cs",
@@ -195,7 +171,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Caisse_Leoni_gm7.csproj",
               "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Caisse_Leoni_gm7.csproj",
               "RelativeDocumentMoniker": "Caisse_Leoni_gm7.csproj",
@@ -207,7 +183,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "SmsService.cs",
+              "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Services\\SmsService.cs",
+              "RelativeDocumentMoniker": "Services\\SmsService.cs",
+              "ToolTip": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Services\\SmsService.cs",
+              "RelativeToolTip": "Services\\SmsService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T13:35:09.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditProfile.xaml",
+              "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\EditProfile.xaml",
+              "RelativeDocumentMoniker": "Views\\EditProfile.xaml",
+              "ToolTip": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\EditProfile.xaml",
+              "RelativeToolTip": "Views\\EditProfile.xaml",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAYwCQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-08-01T18:46:45.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EditProfile.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\EditProfile.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\EditProfile.xaml.cs",
+              "ToolTip": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\EditProfile.xaml.cs",
+              "RelativeToolTip": "Views\\EditProfile.xaml.cs",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAewFoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T18:48:56.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Models\\User.cs",
               "RelativeDocumentMoniker": "Models\\User.cs",
@@ -215,12 +228,11 @@
               "RelativeToolTip": "Models\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAUwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T13:26:48.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-01T13:26:48.58Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TunisiaData.cs",
               "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Data\\TunisiaData.cs",
               "RelativeDocumentMoniker": "Data\\TunisiaData.cs",
@@ -229,18 +241,6 @@
               "ViewState": "AQIAABgAAAAAAAAAAAAQwCkAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-01T19:02:47.518Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "SmsService.cs",
-              "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Services\\SmsService.cs",
-              "RelativeDocumentMoniker": "Services\\SmsService.cs",
-              "ToolTip": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Services\\SmsService.cs",
-              "RelativeToolTip": "Services\\SmsService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAsAAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-01T13:35:09.835Z"
             },
             {
               "$type": "Document",
@@ -268,7 +268,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "FirstLogin.xaml.cs",
               "DocumentMoniker": "C:\\Users\\medya\\source\\repos\\Caisse_Leoni_gm7\\Views\\FirstLogin.xaml.cs",
               "RelativeDocumentMoniker": "Views\\FirstLogin.xaml.cs",
