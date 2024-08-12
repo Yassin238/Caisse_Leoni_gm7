@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Caisse_Leoni_gm7.Views.EditProfile">
+    <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="Information Personnel" FontAttributes="Bold" FontSize="Large" />
+            <Entry x:Name="NomEntry" Placeholder="Nom" />
+            <Entry x:Name="PrenomEntry" Placeholder="Prénom" />
+            <Image x:Name="ProfileImage" HeightRequest="100" WidthRequest="100" />
+            <Button Text="Change Image" Clicked="OnChangeImageClicked" />
+            <Entry x:Name="NumTel1Entry" Placeholder="Numéro Téléphone 1" Keyboard="Telephone" />
+            <Entry x:Name="NumTel2Entry" Placeholder="Numéro Téléphone 2" Keyboard="Telephone" />
+
+            <Label Text="Adresse de Résidence" FontAttributes="Bold" FontSize="Large" />
+            <Entry x:Name="AdresseResidenceEntry" Placeholder="Adresse de résidence" />
+            <Entry x:Name="CodePostalResidenceEntry" Placeholder="Code Postal" Keyboard="Numeric" />
+            <Picker x:Name="GouvernoratResidencePicker" Title="Gouvernorat" SelectedIndexChanged="OnGouvernoratResidenceSelected" />
+            <Picker x:Name="DelegationResidencePicker" Title="Délégation" SelectedIndexChanged="OnDelegationResidenceSelected" />
+            <Picker x:Name="MunicipaliteResidencePicker" Title="Municipalité" />
+
+            <Label Text="Adresse Parents" FontAttributes="Bold" FontSize="Large" />
+            <Entry x:Name="AdresseParentsEntry" Placeholder="Adresse parents" />
+            <Entry x:Name="CodePostalParentsEntry" Placeholder="Code Postal" Keyboard="Numeric" />
+            <Picker x:Name="GouvernoratParentsPicker" Title="Gouvernorat" SelectedIndexChanged="OnGouvernoratParentsSelected" />
+            <Picker x:Name="DelegationParentsPicker" Title="Délégation" SelectedIndexChanged="OnDelegationParentsSelected" />
+            <Picker x:Name="MunicipaliteParentsPicker" Title="Municipalité" />
+
+            <Label Text="Changer Mot de Passe" FontAttributes="Bold" FontSize="Large" />
+            <Entry x:Name="PasswordEntry" Placeholder="Password" IsPassword="True" />
+            <Entry x:Name="RepeatPasswordEntry" Placeholder="Repeat Password" IsPassword="True" />
+
+            <Button Text="Update" Clicked="OnUpdateClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

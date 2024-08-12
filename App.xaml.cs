@@ -1,4 +1,5 @@
 ﻿using Caisse_Leoni_gm7.Services;
+using Caisse_Leoni_gm7.Views;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -9,17 +10,7 @@ namespace Caisse_Leoni_gm7
     {
         static DatabaseService databaseService;
 
-        public static DatabaseService DatabaseService
-        {
-            get
-            {
-                if (databaseService == null)
-                {
-                    InitializeDatabaseAsync().Wait();
-                }
-                return databaseService;
-            }
-        }
+        public static DatabaseService DatabaseService => databaseService;
 
         public static async Task InitializeDatabaseAsync()
         {
@@ -30,20 +21,26 @@ namespace Caisse_Leoni_gm7
                     string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "CaisseLeoniGM7.db3");
                     Console.WriteLine($"Database path: {dbPath}");
                     databaseService = new DatabaseService(dbPath);
-                    Console.WriteLine("Database initialized successfully.");
                     await databaseService.CreateTablesAsync();
+                    Console.WriteLine("Tables created successfully.");
+                    //await databaseService.InsertTestDataAsync();
+                    //Console.WriteLine("Test data inserted successfully.");
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine($"Database initialization failed: {ex.Message}");
                 }
             }
+            else
+            {
+                Console.WriteLine("Database already created.");
+            }
         }
 
         public App()
         {
             InitializeComponent();
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new LoadingPage());
         }
     }
 }

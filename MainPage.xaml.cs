@@ -1,44 +1,66 @@
-﻿using Caisse_Leoni_gm7.Services;
-using System;
+﻿using System;
+using System.Linq;
+using Caisse_Leoni_gm7.Views;
+using Caisse_Leoni_gm7.Services;
 
 namespace Caisse_Leoni_gm7
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
-            LoadUserCount();
+            
         }
 
-        private async void LoadUserCount()
-        {
-            try
-            {
-                await App.InitializeDatabaseAsync();
-                var users = await App.DatabaseService.GetUsersAsync();
-                Console.WriteLine($"Number of users retrieved: {users.Count}");
-                UserCountLabel.Text = $"Number of users: {users.Count}";
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Failed to load user count: {ex.Message}");
-                UserCountLabel.Text = "Failed to load user count";
-            }
-        }
 
-        private void OnCounterClicked(object sender, EventArgs e)
+        private async void OnLoginButtonClicked(object sender, EventArgs e)
         {
-            count++;
+            string username = UsernameEntry.Text;
+            string password = PasswordEntry.Text;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                await DisplayAlert("Error", "Please enter both username and password", "OK");
+                return;
+            }
+
+            var users = await App.DatabaseService.GetUsersAsync();
+            var user = users.FirstOrDefault(u => u.Username == username && u.Password == password);
+
+            if (user != null)
+            {
+                Console.WriteLine($"User {username} logged in successfully.");
+                await DisplayAlert("Success", "Login successful", "OK");
+
+                if (user.IsAdmin)
+                {
+                    if (user.IsFirstLogin)
+                    {
+                        await Navigation.PushAsync(new FirstLogin(App.DatabaseService));
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(new AdminView());
+                    }
+                }
+                else
+                {
+                    if (user.IsFirstLogin)
+                    {
+                        await Navigation.PushAsync(new FirstLogin(App.DatabaseService));
+                    }
+                    else
+                    {
+                        await Navigation.PushAsync(new UserView());
+                    }
+                }
+            }
             else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            {
+                Console.WriteLine($"Login failed for user {username}.");
+                await DisplayAlert("Error", "Invalid username or password", "OK");
+            }
         }
     }
 }

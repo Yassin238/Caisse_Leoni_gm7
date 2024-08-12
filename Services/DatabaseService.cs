@@ -1,8 +1,8 @@
 ﻿using System;
-using Caisse_Leoni_gm7.Models;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using SQLite;
+using Caisse_Leoni_gm7.Models;
 
 namespace Caisse_Leoni_gm7.Services
 {
@@ -16,7 +16,6 @@ namespace Caisse_Leoni_gm7.Services
             _dbPath = dbPath;
             _database = new SQLiteAsyncConnection(dbPath);
             Console.WriteLine($"Database path: {_dbPath}");
-            // Removed Wait(), we'll call CreateTablesAsync separately
         }
 
         public async Task CreateTablesAsync()
@@ -25,9 +24,6 @@ namespace Caisse_Leoni_gm7.Services
             {
                 await _database.CreateTableAsync<User>();
                 Console.WriteLine("User table created.");
-
-                await _database.CreateTableAsync<TwoFactorAuth>();
-                Console.WriteLine("TwoFactorAuth table created.");
 
                 await _database.CreateTableAsync<Log>();
                 Console.WriteLine("Log table created.");
@@ -40,17 +36,28 @@ namespace Caisse_Leoni_gm7.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Failed to create table: {ex.Message}");
+                Console.WriteLine($"Table creation failed: {ex.Message}");
             }
         }
 
-        // Method to retrieve all users
-        public async Task<List<User>> GetUsersAsync()
+        public async Task InsertTestDataAsync()
         {
-            return await _database.Table<User>().ToListAsync();
+            try
+            {
+                var testUser = new User { Username = "test", Password = "test", IsAdmin = false, IsFirstLogin = false };
+                var testAdmin = new User { Username = "admin", Password = "gm7", IsAdmin = true, IsFirstLogin = false };
+
+                await SaveUserAsync(testUser);
+                await SaveUserAsync(testAdmin);
+                Console.WriteLine("Test data inserted.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Test data insertion failed: {ex.Message}");
+            }
         }
 
-        // Method to save User
+        // User
         public Task<int> SaveUserAsync(User user)
         {
             if (user.Id != 0)
@@ -63,20 +70,18 @@ namespace Caisse_Leoni_gm7.Services
             }
         }
 
-        // Method to save TwoFactorAuth
-        public Task<int> SaveTwoFactorAuthAsync(TwoFactorAuth twoFactorAuth)
+        public Task<int> DeleteUserAsync(User user)
         {
-            if (twoFactorAuth.Id != 0)
-            {
-                return _database.UpdateAsync(twoFactorAuth);
-            }
-            else
-            {
-                return _database.InsertAsync(twoFactorAuth);
-            }
+            return _database.DeleteAsync(user);
         }
 
-        // Method to save Log
+        public Task<List<User>> GetUsersAsync()
+        {
+            return _database.Table<User>().ToListAsync();
+        }
+
+
+        // Log
         public Task<int> SaveLogAsync(Log log)
         {
             if (log.Id != 0)
@@ -89,7 +94,12 @@ namespace Caisse_Leoni_gm7.Services
             }
         }
 
-        // Method to save Depense
+        public async Task<List<Log>> GetLogsAsync()
+        {
+            return await _database.Table<Log>().ToListAsync();
+        }
+
+        // Depense
         public Task<int> SaveDepenseAsync(Depense depense)
         {
             if (depense.Id != 0)
@@ -102,7 +112,17 @@ namespace Caisse_Leoni_gm7.Services
             }
         }
 
-        // Method to save Alimentation
+        public Task<int> DeleteDepenseAsync(Depense depense)
+        {
+            return _database.DeleteAsync(depense);
+        }
+
+        public Task<List<Depense>> GetDepensesAsync()
+        {
+            return _database.Table<Depense>().ToListAsync();
+        }
+
+        // Alimentation
         public Task<int> SaveAlimentationAsync(Alimentation alimentation)
         {
             if (alimentation.Id != 0)
@@ -114,5 +134,17 @@ namespace Caisse_Leoni_gm7.Services
                 return _database.InsertAsync(alimentation);
             }
         }
+
+        public Task<int> DeleteAlimentationAsync(Alimentation alimentation)
+        {
+            return _database.DeleteAsync(alimentation);
+        }
+
+        public Task<List<Alimentation>> GetAlimentationsAsync()
+        {
+            return _database.Table<Alimentation>().ToListAsync();
+        }
+
+
     }
 }

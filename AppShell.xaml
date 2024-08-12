@@ -7,9 +7,17 @@
     Shell.FlyoutBehavior="Disabled"
     Title="Caisse_Leoni_gm7">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ShellItem Title="Home">
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+    </ShellItem>
+    <ShellItem Title="Depenses">
+        <ShellContent ContentTemplate="{DataTemplate local:Views.AddDepensePage}" />
+    </ShellItem>
+    <ShellItem Title="Alimentation">
+        <ShellContent ContentTemplate="{DataTemplate local:Views.AddAlimentationPage}" />
+    </ShellItem>
+    <ShellItem Title="Users">
+        <ShellContent ContentTemplate="{DataTemplate local:Views.ManageUsersPage}" />
+    </ShellItem>
 
 </Shell>

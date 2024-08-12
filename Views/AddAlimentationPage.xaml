@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Caisse_Leoni_gm7.Views.AddAlimentationPage">
+    <StackLayout Padding="10">
+        <Entry x:Name="NomEntry" Placeholder="Name" />
+        <Entry x:Name="DescriptionEntry" Placeholder="Description" />
+        <Entry x:Name="AmountEntry" Placeholder="Amount" Keyboard="Numeric" />
+        <DatePicker x:Name="DatePicker" />
+        <Button Text="Save" Clicked="OnSaveClicked" />
+    </StackLayout>
+</ContentPage>
