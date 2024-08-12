@@ -7,9 +7,9 @@ namespace Caisse_Leoni_gm7.Services
 {
     public class SmsService
     {
-        private const string AccountSid = "*****************"; 
-        private const string AuthToken = "*****************";
-        private const string FromPhoneNumber = "+**************";
+        private const string AccountSid = ""; 
+        private const string AuthToken = "";
+        private const string FromPhoneNumber = "";
 
         public SmsService()
         {
